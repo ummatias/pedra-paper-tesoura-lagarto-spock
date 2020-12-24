@@ -14,7 +14,6 @@ const scissors = 3
 const lizard = 4
 const spock = 5
 
-let scoreCount = 0
 getScore()
 putScore()
 
@@ -184,8 +183,12 @@ function removeLight(){
 }
 
 function getScore() {
-    scoreCount += Number.parseInt(localStorage.getItem('score'))
-    console.log(scoreCount)
+    storedScore = Number.parseInt(localStorage.getItem('score'))
+    if(scoreCount !== storedScore){
+        scoreCount = storedScore
+    }else{
+        scoreCount = 0
+    }
 }
 
 function saveScore() {
