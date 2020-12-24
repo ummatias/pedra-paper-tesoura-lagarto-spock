@@ -184,10 +184,8 @@ function removeLight(){
 }
 
 function getScore() {
-    storedScore = Number.parseInt(localStorage.getItem('score'))
-    if(scoreCount !== storedScore){
-        scoreCount = storedScore
-    }
+    scoreCount = Number.parseInt(localStorage.getItem('score'))
+    if(scoreCount === NaN) scoreCount = 0
 }
 
 function saveScore() {
