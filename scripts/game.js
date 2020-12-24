@@ -15,8 +15,6 @@ const lizard = 4
 const spock = 5
 
 let scoreCount = 0
-getScore()
-putScore()
 
 document.addEventListener('click', function(e){
     const el = e.target
@@ -86,8 +84,6 @@ function updateGameScore(result){
     if(result === false) {
         scoreCount--
     }
-
-    saveScore()
 }
 
 function putScore(){
@@ -181,13 +177,4 @@ function removeLight(){
     if(houseSelectArea.classList.contains('light')){
         houseSelectArea.classList.remove('light')
     }
-}
-
-function getScore() {
-    scoreCount = Number.parseInt(localStorage.getItem('score'))
-    if(scoreCount === NaN) scoreCount = 0
-}
-
-function saveScore() {
-    localStorage.setItem('score', JSON.stringify(scoreCount))
 }
