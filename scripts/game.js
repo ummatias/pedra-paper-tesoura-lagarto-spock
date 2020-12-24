@@ -14,6 +14,7 @@ const scissors = 3
 const lizard = 4
 const spock = 5
 
+let ScoreCount = 0
 getScore()
 putScore()
 
@@ -186,8 +187,6 @@ function getScore() {
     storedScore = Number.parseInt(localStorage.getItem('score'))
     if(scoreCount !== storedScore){
         scoreCount = storedScore
-    }else{
-        scoreCount = 0
     }
 }
 
