@@ -14,7 +14,7 @@ const scissors = 3
 const lizard = 4
 const spock = 5
 
-let ScoreCount = 0
+let scoreCount = 0
 getScore()
 putScore()
 
