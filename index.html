@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Rock Paper Scissors +</title>
+</head>
+<body>
+    <div class="game">
+        <section class="rule-modal">
+            <h1>RULES</h1>
+            <img class="close" src="./assets/icon-close.svg">
+            <img class="rule-img" src="./assets/image-rules-bonus.svg">
+        </section>
+        <section class="score-board">
+            <img src="./assets/logo-bonus.svg" />
+            <div class="score">
+                <p>SCORE</p>
+                <h1 class="scoreCount">0</h1>
+            </div>
+        </section>
+        
+        <section class="selection">
+            <img class="pentagon" src="./assets/bg-pentagon.svg" />
+            <button class="rock-menu"><img src="./assets/icon-rock.svg"/></button>
+            <button class="paper-menu"><img src="./assets/icon-paper.svg"/></button>
+            <button class="scissors-menu"><img src="./assets/icon-scissors.svg"/></button>
+            <button class="lizard-menu"><img src="./assets/icon-lizard.svg"/></button>
+            <button class="spock-menu"><img src="./assets/icon-spock.svg"/></button>
+        </section>
+
+        <section class="result-page">
+            <div class="result">
+                <div class="player-selec">
+                    <div class="select-item player-op"></div>
+                    <p>YOU PICKED</p>
+                </div>
+                
+                <div class="house-selec">
+                    <div class="loading-dot"></div>
+                    <div class="select-item house-op"></div>
+                    <p>HOUSE PICKED</p>
+                </div>
+            </div>
+
+            <div class="result-menu">
+                <h1 class="result-text"></h1>
+                <button class="play-again">PLAY AGAIN</button>
+            </div>
+        </section>
+
+        <button class="rules">RULES</button>
+    </div>
+
+    <script src="./scripts/game.js"></script>
+    <script src="./scripts/rules.js"></script>
+</body>
+</html>

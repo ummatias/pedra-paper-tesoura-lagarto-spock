@@ -1,0 +1,399 @@
+:root{
+
+    /* Primary */
+    --scissors_gradient: linear-gradient(180deg ,hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    --paper_gradient: linear-gradient(180deg ,hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    --rock_gradient: linear-gradient(180deg , hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    --lizard_gradient: linear-gradient(180deg , hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+    --cyan: linear-gradient(180deg ,hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+
+    /* Neutral */
+    --dark_text:hsl(229, 25%, 31%);
+    --score_text: hsl(229, 64%, 46%);
+    --header_outline: hsl(217, 16%, 45%);
+
+    /* Background */
+    --radial_gradient: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+
+}
+
+.game {
+    background-image: var(--radial_gradient);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game .rules{
+    color: whitesmoke;
+    background-color: transparent;
+    border: 1px solid whitesmoke;
+    font-size: 18px;
+    padding: .5% 3%;
+    border-radius: 0.5em;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+.score-board{
+    display: flex;
+    width: 40%;
+    height: 10%;
+    justify-content: space-between;
+    align-items: center;
+    border: 5px solid var(--header_outline);
+    border-radius: 1em;
+    padding: 2%;
+    margin: 0 50%;
+    margin-top: 2%;
+
+}
+
+.score-board img{
+    height: 100%;
+}
+
+.score-board .score{
+    background-color: whitesmoke;
+    padding: 2%;
+    height: 90%;
+    width: 15%;
+    border-radius: 0.5em;
+    margin: 10% 0;
+    text-align: center;
+    align-items: center;
+}
+
+.score-board .score p{
+    color: var(--score_text);
+    font-size: 12px;
+}
+
+.score-board .score h1{
+    color: var(--dark_text);
+    font-size: 48px;
+    display: block;
+}
+
+.selection {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.selection .pentagon{
+    height: 60%;
+}
+
+.selection button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: whitesmoke;
+    outline: none;
+}
+
+.selection button img{
+    height: 50%;
+}
+
+.select-item {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rock{
+    border: 12px solid hsl(349, 71%, 52%);
+    box-shadow: 3px 3px 3px rgb(7, 7, 7);
+}
+.paper{
+    border: 12px solid hsl(230, 89%, 62%);
+    box-shadow: 3px 3px 3px rgb(7, 7, 7);
+}
+.scissors{
+    border: 12px solid hsl(39, 89%, 49%);
+    box-shadow: 3px 3px 3px rgb(7, 7, 7);
+}
+.spock{
+    border: 12px solid hsl(189, 59%, 53%);
+    box-shadow: 3px 3px 3px rgb(7, 7, 7);
+}
+
+.lizard{
+    border: 12px solid hsl(261, 73%, 60%);
+    box-shadow: 3px 3px 3px rgb(7, 7, 7);
+}
+
+.rock-menu{
+    border: 12px solid hsl(349, 71%, 52%);
+    box-shadow: 3px 3px 3px rgb(7, 7, 7);
+    position: absolute;
+    bottom: 10%;
+    right: 40%;
+}
+.paper-menu{
+    border: 12px solid hsl(230, 89%, 62%);
+    box-shadow: 3px 3px 3px rgb(7, 7, 7);
+    position: absolute;
+    top: 50%;
+    right: 37%;
+}
+.scissors-menu{
+    border: 12px solid hsl(39, 89%, 49%);
+    box-shadow: 3px 3px 3px rgb(7, 7, 7);
+    position: absolute;
+    top: 35%;
+}
+.spock-menu{
+    border: 12px solid hsl(189, 59%, 53%);
+    box-shadow: 3px 3px 3px rgb(7, 7, 7);
+    position: absolute;
+    top: 50%;
+    left: 37%;
+}
+
+.lizard-menu{
+    border: 12px solid hsl(261, 73%, 60%);
+    box-shadow: 3px 3px 3px rgb(7, 7, 7);
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+}
+
+.result-page{
+    width: 100%;
+    display: none;
+}
+
+.result{
+    margin: 5% 25%;
+    margin-top: 10%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result p{
+    color: whitesmoke;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 50%;
+}
+
+.result-menu{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-menu h1{
+    margin-bottom: 2%;
+    font-size: 32px;
+    color: whitesmoke;
+}
+
+.result-menu button{
+    padding: 3% 10%;
+    color: whitesmoke;
+    background: transparent;
+    border: 1px solid whitesmoke;
+    font-size: 18px;
+    border-radius: 0.5em;
+}
+
+.rule-modal{
+    background-color: whitesmoke;
+    width: 50%;
+    height: 60%;
+    position: fixed;
+    z-index: 1;
+    display: none;
+    margin-top: 10%;
+    border-radius: 1em;
+} 
+
+.rule-modal h1{
+    color: var(--dark_text);
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.rule-modal .close{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 5%;
+}
+
+.rule-modal .rule-img{
+    margin: 8% 30% 
+}
+
+.house-op{
+    display: none;
+}
+
+.loading-dot {
+    border-radius: 50%;
+    border: none;
+    width: 124px;
+    height: 124px;
+    background-color: var(--dark_text);
+    grid-area: houseSelection;
+    animation: pulse-animation 1.5s ease-out infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: scale(0.7);
+    }
+    50% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(0.7);
+        opacity: 0.5;
+    }
+}
+
+
+@media screen and (max-width: 1370px){
+
+    .rock-menu{
+        position: absolute;
+        bottom: 10%;
+        right: 50%;
+    }
+    .paper-menu{
+        position: absolute;
+        bottom: 35%;
+        right: 35%;
+    }
+    .scissors-menu{
+        position: absolute;
+        top: 35%;
+    }
+    .spock-menu{
+        position: absolute;
+        bottom: 35%;
+        left: 35%;
+    }
+    
+    .lizard-menu{
+        position: absolute;
+        bottom: 10%;
+        left: 38%;
+
+    }
+}
+
+@media screen and (max-width: 820px){
+
+    .score-board {
+        margin-top: 10%;
+        width: 70%;
+        height: 10%;
+        padding: 5%;
+    }
+    
+    .score-board img{
+        height: 100%;
+    }
+
+    .score-board .score{
+        height: 80%;
+        width: 25%;
+        padding: 5%;
+
+    }
+
+    .rock-menu{
+        position: absolute;
+        bottom: 22%;
+        right: 20%;
+    }
+    .paper-menu{
+        position: absolute;
+        bottom: 35%;
+        right: 10%;
+    }
+    .scissors-menu{
+        position: absolute;
+        top: 40%;
+    }
+    .spock-menu{
+        position: absolute;
+        bottom: 35%;
+        left: 10%;
+    }
+    
+    .lizard-menu{
+        position: absolute;
+        bottom: 22%;
+        left: 20%;
+    }
+
+    .rule-modal{
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+    }
+
+    .selection {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .selection .pentagon{
+        height: 35%;
+    }
+
+    .game .rules{
+        padding: 3% 10%;
+        bottom: 5%;
+        right: auto;
+    }
+
+    .rule-modal .close{
+        top: 5%;
+        right: 5%;
+        width: 8%;
+    }
+    
+    .rule-modal .rule-img{
+        margin: 50% 5%
+    }
+
+    .result{
+        margin: 25% 10%;
+        width: 80%;
+    }
+}
+
+.light {
+    box-shadow: 0px 0px 15px 70px rgba(255, 255, 255, 0.05);
+
+}
