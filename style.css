@@ -339,8 +339,13 @@ html{
         margin: 50% 5%
     }
 
+    
     .result{
-        margin: 25% 10%;
+        margin: 15% 10%;
         width: 80%;
+    }
+
+    .result-menu{
+        align-self: center;
     }
 }
