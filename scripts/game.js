@@ -157,6 +157,7 @@ function clear(){
 function createIcon(iconName){
     const img = document.createElement('img')
     img.setAttribute('src', `./assets/icon-${iconName}.svg`)
+    img.setAttribute('alt', iconName)
     return img
 }
 

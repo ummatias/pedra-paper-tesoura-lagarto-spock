@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="shortcut icon" href="./assets/favicon-32x32.png" />
     <title>Rock Paper Scissors +</title>
 </head>
 <body>
     <div class="game">
         <section class="rule-modal">
             <h1>RULES</h1>
-            <img class="close" src="./assets/icon-close.svg">
-            <img class="rule-img" src="./assets/image-rules-bonus.svg">
+            <img class="close" src="./assets/icon-close.svg" alt="close">
+            <img class="rule-img" src="./assets/image-rules-bonus.svg" alt="rules">
         </section>
         <section class="score-board">
-            <img src="./assets/logo-bonus.svg" />
+            <img src="./assets/logo-bonus.svg" alt="rock paper scissors lizar spock"/>
             <div class="score">
                 <p>SCORE</p>
                 <h1 class="scoreCount">0</h1>
@@ -24,12 +25,12 @@
         </section>
         
         <section class="selection">
-            <img class="pentagon" src="./assets/bg-pentagon.svg" />
-            <button class="rock-menu"><img src="./assets/icon-rock.svg"/></button>
-            <button class="paper-menu"><img src="./assets/icon-paper.svg"/></button>
-            <button class="scissors-menu"><img src="./assets/icon-scissors.svg"/></button>
-            <button class="lizard-menu"><img src="./assets/icon-lizard.svg"/></button>
-            <button class="spock-menu"><img src="./assets/icon-spock.svg"/></button>
+            <img class="pentagon" src="./assets/bg-pentagon.svg" alt="background pentagon"/>
+            <button class="rock-menu" title="rock"><img src="./assets/icon-rock.svg" alt="rock"/></button>
+            <button class="paper-menu" title="paper"><img src="./assets/icon-paper.svg" alt="paper"/></button>
+            <button class="scissors-menu" title="scissors"><img src="./assets/icon-scissors.svg" alt="scissors"/></button>
+            <button class="lizard-menu" title="lizard"><img src="./assets/icon-lizard.svg" alt="lizard"/></button>
+            <button class="spock-menu" title="spock"><img src="./assets/icon-spock.svg" alt="spock"/></button>
         </section>
 
         <section class="result-page">
@@ -41,7 +42,7 @@
 
                 <div class="result-menu">
                     <h1 class="result-text"></h1>
-                    <button class="play-again">PLAY AGAIN</button>
+                    <button class="play-again" title="play-again">PLAY AGAIN</button>
                 </div>
 
                 <div class="house-selec">
@@ -52,7 +53,7 @@
             </div>
         </section>
 
-        <button class="rules">RULES</button>
+        <button class="rules" title="rules">RULES</button>
     </div>
 
     <script src="./scripts/game.js"></script>
