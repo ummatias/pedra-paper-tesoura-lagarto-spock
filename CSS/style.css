@@ -153,7 +153,7 @@ html{
     border: 14px solid hsl(39, 89%, 49%);
     box-shadow: 3px 3px 3px rgb(7, 7, 7);
     position: absolute;
-    transform: translateY(-120%);
+    transform: translateY(-145%);
 }
 .spock-menu{
     border: 14px solid hsl(189, 59%, 53%);
@@ -352,9 +352,10 @@ html{
     }
 
     .result{
-        margin: 15% 15%;
-        width: 80%;
+        width: 100%;
         justify-content: space-between;
+        align-items: center;
+        margin: 25% 0;
     }
 
     .select-item {
@@ -364,14 +365,30 @@ html{
 
     .select-item img {
         width: 50px;
+        height: 50px;
     }
 
+    .result-page{
+        width: 100%;
+        display: none;
+        justify-content: center;
+        
+    }
     .result-menu{
         display: none;
         position: absolute;
         flex-direction: column;
         align-items: center;
-        transform: translateY(+140%);
+        transform: translateX(-8%) translateY(+220%);
+       
+    }
+
+    .player-selec{
+        margin-right: 10%;
+    }
+
+    .house-select{
+        margin-left: 10%;
     }
 
     .loading-dot {
@@ -399,4 +416,28 @@ html{
         border: 12px solid hsl(261, 73%, 60%);
         box-shadow: 3px 3px 3px rgb(7, 7, 7);
     }
+
+    .rock-menu{
+        border: 12px solid hsl(349, 71%, 52%);
+        box-shadow: 3px 3px 3px rgb(7, 7, 7);
+    }
+    .paper-menu{
+        border: 12px solid hsl(230, 89%, 62%);
+        box-shadow: 3px 3px 3px rgb(7, 7, 7);
+    }
+    .scissors-menu{
+        border: 12px solid hsl(39, 89%, 49%);
+        box-shadow: 3px 3px 3px rgb(7, 7, 7);
+        position: absolute;
+    }
+    .spock-menu{
+        border: 12px solid hsl(189, 59%, 53%);
+        box-shadow: 3px 3px 3px rgb(7, 7, 7);
+    }
+    
+    .lizard-menu{
+        border: 12px solid hsl(261, 73%, 60%);
+        box-shadow: 3px 3px 3px rgb(7, 7, 7);
+    }
+    
 }
