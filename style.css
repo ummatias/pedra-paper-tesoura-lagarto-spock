@@ -315,6 +315,14 @@ html{
         height: 35%;
     }
 
+    .selection button{
+        width: 80px;
+        height: 80px;
+    }
+    
+    .selection button img{
+        height: 50%;
+    }
     .game .rules{
         padding: 3% 10%;
         bottom: 5%;
