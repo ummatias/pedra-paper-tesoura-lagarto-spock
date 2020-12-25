@@ -9,6 +9,6 @@ document.addEventListener('click', function(e){
     }
 
     if(el.classList.contains('rules')){
-        modal.style.display = 'grid'
+        modal.style.display = 'flex'
     }
 })
