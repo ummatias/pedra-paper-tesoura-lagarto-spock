@@ -265,8 +265,8 @@ html{
 .loading-dot {
     border-radius: 50%;
     border: none;
-    width: 234px;
-    height: 234px;
+    width: 249px;
+    height: 249px;
     background-color: var(--dark_text);
     grid-area: houseSelection;
     animation: pulse-animation 1.5s ease-out infinite;
